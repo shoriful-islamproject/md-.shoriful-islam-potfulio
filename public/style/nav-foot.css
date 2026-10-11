@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.5s;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00c6ff;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 1; transform: translateY(20px); }
+    to { opacity: 1; }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.2rem;
+    /* position: relative; */
+    animation: slideUp 1.5s ease-in-out;
+}
+
+/* @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+} */
+
+.footer-address {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-address a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover; 
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+.rain {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: white;
+    opacity: 0.6;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+.pic{
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+
+}
+.rain {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: white;
+    opacity: 0.6;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    z-index: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    opacity: 0;
+    animation: slideIn 2s ease-in-out 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Rain Animation */
+.rain {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: white;
+    
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Moving Text Animation */
+.moving-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: moveText 8s linear infinite, typing 4s steps(40) infinite alternate;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

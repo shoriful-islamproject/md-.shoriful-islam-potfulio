@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="../style/profile.css" />
+</head>
+<body>
+    <%- include ('partials/nav.ejs') %>
+  <div class="profile-container">
+    <h1><%= user.name %></h1>
+    <p><strong>Age:</strong> <%= user.age %></p>
+    <p><strong>Location:</strong> <%= user.location %></p>
+    <p><strong>Job Title:</strong> <%= user.jobTitle %></p>
+
+   <h2>Education</h2>
+<ul>
+  <% if (user.education && user.education.length) { %>
+    <% user.education.forEach(item => { %>
+      <li><strong><%= item.level %></strong> - <%= item.institute %> (CGPA: <%= item.result %>)</li>
+    <% }); %>
+  <% } else { %>
+    <li>No education data available.</li>
+  <% } %>
+</ul>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <% user.skills.forEach(skill => { %>
+        <span class="badge"><%= skill %></span>
+      <% }); %>
+    </div>
+  </div>
+
+</body>
+

@@ -1,0 +1,123 @@
+/* Base styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+}
+
+/* Profile Container */
+.profile-container {
+    
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px;
+  background: blue;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Header Styles */
+.profile-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: black;
+  animation: slideInLeft 1s ease;
+}
+
+.profile-container h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  color: #34495e;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  animation: slideInRight 1s ease;
+}
+
+/* Paragraph & List Styling */
+.profile-container p,
+.profile-container li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Skills Badges */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  background-color: #3498db;
+  color:black;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  animation: popIn 0.5s ease;
+}
+
+.badge:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

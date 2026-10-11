@@ -1,0 +1,28 @@
+#shorif{  width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    margin-left: 400px;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+#man{
+
+    margin: 30px;
+    padding: 10px;
+
+}
+.btn-con{
+    margin-left: 50px;
+}
+
+button{
+    width:40px;
+    height:40px;
+    margin: 5px;
+    align-items: end;
+    justify-content: space-between;
+}
+button:hover{
+    background-color: green;
+}

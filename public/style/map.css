@@ -1,0 +1,32 @@
+
+    
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* Map full screen */
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Modern search box styling */
+        #search-box {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;
+            z-index: 9999;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }

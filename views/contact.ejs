@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/contact.css">
+</head>
+<body>
+    <%- include ('partials/nav.ejs') %>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm" action="/contactapi" method="post">
+                <label for="username">Name</label>
+                <input type="text" id="name" name="username"  placeholder="Your Name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message"  placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <script src="../javascript/contact.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/about.css">
+</head>
+<body>
+    <%- include ('partials/nav.ejs') %>
+    <header><i>
+        <h1>Shoriful Islam</h1>
+        <p>Full-Stack Developer</p>
+      </i></header>
+    <section class="about"><i>
+        <h2>About Me</h2>
+        <p>Address: Bangladesh, Khulna, Satkhira, Village: Bangkal</p>
+        <p>Age: 28 | Gender: Male</p>
+        <p>Family: Middle Class</p>
+     </i></section>
+    <section class="skills"><i>
+        <h2>Skills</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Frontend</li>
+            <li>Backend (Node.js, Express)</li>
+        </ul>
+      </i></section>
+    <section class="education"><i>
+        <h2>Education</h2>
+        <p>Day Night College (2015) - Computer Science, CGPA: A+</p>
+        <p>Satkhira Govt. College (HSC 2014) - CGPA: 3.69</p>
+        <p>Satkhira Bangkal High School (SSC 2011-2012) - CGPA: 3.00</p>
+     </i></section>
+    <section class="experience">
+        <h2>Work Experience</h2>
+        <p><i>Hoplun Aparel Limited, Gazipur (2016) - Computer Operator, Office Accountant</i></p>
+    </section>
+    <section class="contact">
+        <h2>Contact</h2>
+        <p><i>Currently looking for a job. Feel free to reach out!</i></p>
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message" style="display: none; color: green; font-weight: bold;">Thank you for visiting my portfolio!</p>
+    </section>
+    
+
+    <script src="../javascript/about.js"></script>
+    
+</body>
+</html>
